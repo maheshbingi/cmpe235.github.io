@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab: Basic JavaScript Programming</title>
+  <script>
+  function validatePhone() 
+  {
+    var inputtxt = document.getElementById("phone");
+    var phoneno = /^\(?[(]?([0-9]{3})\)?[) ]?([0-9]{3})[- ]?([0-9]{4})$/; 
+
+    if(!inputtxt.value.match(phoneno))  
+    {  
+      alert("Invalid Phone Number");  
+    }
+    else{
+      alert("Valid Phone Number"); 
+    }  
+  }
+  </script>
+</head>
+<body>
+  <h3>Lab: Basic JavaScript Programming</h3>
+  Phone Number: <input type="text" id="phone" name="phone">
+  <button onclick="validatePhone()">Validate Phone</button>
+</form>
+</body>
+</html>
